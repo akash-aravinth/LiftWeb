@@ -6,6 +6,22 @@ import java.sql.SQLException;
 
 public class DBConnection {
     private static Connection connection;
+    public static Connection sqlConnection;
+    public static Connection getSqlConnection(){
+        if (sqlConnection == null){
+            String url = "jdbc:mysql://localhost:3306/lift";
+            String userName = "root";
+            String password = "akash2002";
+            try{
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                connection = DriverManager.getConnection(url,userName,password);
+                System.out.println("Connected");
+            }catch (Exception e){
+
+            }
+        }
+        return sqlConnection;
+    }
     public static Connection getConnection(){
         if (connection == null){
             try {
