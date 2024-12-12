@@ -5,10 +5,13 @@ import java.util.List;
 
 public class Lift {
     private int liftNo;
-    private List<Integer> stations;
-    private int stepsToMove;
+    private int increment;
     private int currentPos;
     private int destinationPos;
+    private String status;
+    private int noOfPassengers;
+    private List<Integer> stations;
+
     public Lift(){
         stations = new ArrayList<>();
     }
@@ -21,20 +24,12 @@ public class Lift {
         this.liftNo = liftNo;
     }
 
-    public List<Integer> getStations() {
-        return stations;
+    public int getIncrement() {
+        return increment;
     }
 
-    public void setStations(List<Integer> stations) {
-        this.stations = stations;
-    }
-
-    public int getStepsToMove() {
-        return stepsToMove;
-    }
-
-    public void setStepsToMove(int stepsToMove) {
-        this.stepsToMove = stepsToMove;
+    public void setIncrement(int increment) {
+        this.increment = increment;
     }
 
     public int getCurrentPos() {
@@ -51,5 +46,29 @@ public class Lift {
 
     public void setDestinationPos(int destinationPos) {
         this.destinationPos = destinationPos;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public int getNoOfPassengers() {
+        return noOfPassengers;
+    }
+
+    public void setNoOfPassengers(int noOfPassengers) {
+        this.noOfPassengers = noOfPassengers;
+    }
+
+    public List<Integer> getStations() {
+        return stations;
+    }
+
+    public void setStations(List<Integer> stations) {
+        this.stations = stations;
     }
 }
